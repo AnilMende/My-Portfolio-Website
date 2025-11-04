@@ -5,7 +5,7 @@ import about_profile from '../../assets/about_profile.svg';
 
 const About = () => {
     return(
-        <AboutContainer>
+        <AboutContainer id="about">
             <div className="about-title">
                 <h1>About Me</h1>
                 <img src={theme_pattern} alt="" />

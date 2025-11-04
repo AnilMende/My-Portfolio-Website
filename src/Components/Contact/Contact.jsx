@@ -1,13 +1,35 @@
 import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
 import theme_pattern from '../../assets/theme_pattern.svg';
 import mail_icon from '../../assets/mail_icon.svg';
 import call_icon from '../../assets/call_icon.svg';
 import location_icon from '../../assets/location_icon.svg';
 
 const Contact = () => {
+
+  const [result, setResult] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", "b5b07791-6327-49d2-ae72-9167c0cb3510");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    // setResult(data.success ? "Success!" : "Error");
+    if(data.success){
+      // console.log('Success', data);
+      alert(data.message)
+    }
+  };
+
     return (
-        <ContactContainer>
+        <ContactContainer id="contact">
             <div className="contact-title">
                 <h1>Get In Touch</h1>
                 <img src={theme_pattern} alt="" />
@@ -37,7 +59,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <form className="contact-right">
+                <form onSubmit={handleSubmit} className="contact-right">
                     <label htmlFor="">Your Name</label>
                     <input type="text" placeholder="Enter your name" name="name" />
                     <label htmlFor="">Your Email</label>

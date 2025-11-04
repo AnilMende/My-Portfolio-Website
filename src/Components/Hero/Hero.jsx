@@ -1,19 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import profile_img from '../../assets/profile_img.svg';
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Hero = () => {
-    return(
-        <HeroContainer>
-            <img src={profile_img} className="profile-img" />
-            <h1><span>I'm Anil Mende,</span> Full Stack Developer Based In India</h1>
-            <p className="description">I'm a Aspiring full stack developer, with expertise in React.js Node.js Express and MongoDB</p>
-            <div className="hero-action">
-                <div className="hero-connect">Connect With Me</div>
-                <div className="hero-resume">Myresume</div>
-            </div>
-        </HeroContainer>
-    )
+  return (
+    <HeroContainer id="home">
+      <img src={profile_img} className="profile-img" />
+      <h1><span>I'm Anil Mende,</span> Full Stack Developer Based In India</h1>
+      <p className="description">I'm a Aspiring full stack developer, with expertise in React.js Node.js Express and MongoDB</p>
+      <div className="hero-action">
+        <div className="hero-connect">
+          <AnchorLink className="anchor-link" offset={50} href="#contact">Connect with Me</AnchorLink>
+        </div>
+        <div className="hero-resume">Myresume</div>
+      </div>
+    </HeroContainer>
+  )
 }
 
 export default Hero;
@@ -78,5 +81,10 @@ const HeroContainer = styled.div`
 
       .hero-resume:hover{
         border-color:#b415ff;
+      }
+
+      .anchor-link{
+        text-decoration: none;
+        color: white;
       }
 `;
