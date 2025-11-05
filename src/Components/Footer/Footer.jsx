@@ -8,7 +8,8 @@ const Footer = () => {
         <FooterContainer>
             <div className="footer-top">
                 <div className="footer-top-left">
-                    <img src={footer_logo} alt="" />
+                    {/* <img src={footer_logo} alt="" /> */}
+                    <h2 className="logo">ANIL</h2>
                     <p>I'm a Aspiring full stack developer, with expertise in React.js Node.js Express and MongoDB</p>
                 </div>
 
@@ -42,6 +43,15 @@ const FooterContainer = styled.div`
       flex-direction: column;
       margin: 50px 170px;
       gap: 30px;
+
+      .logo{
+        font-family: Outfit;
+        font-size: 26px;
+        font-weight: 800;
+        cursor: pointer;
+        margin-bottom: 5px;
+      }
+
 
       .footer-top{
         display: flex;
