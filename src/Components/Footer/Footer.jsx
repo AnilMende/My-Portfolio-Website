@@ -49,23 +49,23 @@ const FooterContainer = styled.div`
       }
 
       .footer-top-left p{
-        font-size: 20px;
-        max-width: 400px;
+        font-size: 16px;
+        max-width: 450px;
       }
 
       .footer-top-right{
         display: flex;
         align-items: center;
-        gap: 35px;
+        gap: 15px;
       }
 
       .footer-email-input{
         display: flex;
-        gap: 30px;
-        padding: 20px 30px;
+        gap: 20px;
+        padding: 15px 20px;
         border-radius: 50px;
         background: #32323b;
-        padding-right: 80px;
+        /* padding-right: 80px; */
       }
       .footer-email-input input{
         outline: none;
@@ -77,8 +77,8 @@ const FooterContainer = styled.div`
       }
 
       .footer-subscribe{
-        font-size: 20px;
-        padding: 22px 45px;
+        font-size: 16px;
+        padding: 18px 40px;
         border-radius: 50px;
         background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
         cursor: pointer;

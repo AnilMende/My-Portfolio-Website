@@ -88,7 +88,7 @@ const ContactContainer = styled.div`
       }
       .contact-title h1{
         padding: 0px 30px;
-        font-size: 80px;
+        font-size: 60px;
         font-weight: 600;
       }
       .contact-title img{
@@ -99,8 +99,10 @@ const ContactContainer = styled.div`
       }
 
       .contact-section{
+        width: 100%;
         display: flex;
-        gap: 150px;
+        justify-content: space-between;
+        gap: 30px;
 
       }
 
@@ -110,7 +112,7 @@ const ContactContainer = styled.div`
         gap: 30px;
       }
       .contact-left h1{
-        font-size: 80px;
+        font-size: 50px;
         font-weight: 700;
         background:linear-gradient(270deg, #df8908 80%, #b415ff 100%);
         background-clip: text;
@@ -120,14 +122,14 @@ const ContactContainer = styled.div`
       .contact-left p{
         max-width: 550px;
         color: #d8d8d8;
-        font-size: 20px;
-        line-height: 35px;
+        font-size: 16px;
+        line-height: 25px;
       }
 
       .contact-details{
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
         color: #d8d8d8;
         font-size: 22px;
       }
@@ -135,14 +137,15 @@ const ContactContainer = styled.div`
       .contact-detail{
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 18px;
       }
 
       .contact-right{
+        flex-basis: 55%;
         display: flex;
         flex-direction: column;
         align-items: start;
-        gap: 30px;
+        gap: 15px;
       }
       .contact-right label{
         color: #d8d8d8;
@@ -176,8 +179,8 @@ const ContactContainer = styled.div`
         color: white;
         border-radius: 50px;
         background: linear-gradient(264deg, #df8908 -5.09% , #b415ff 106.28%);
-        font-size: 22px;
-        padding: 20px 50px;
+        font-size: 18px;
+        padding: 18px 40px;
         margin-bottom: 50px;
         cursor: pointer;
         transition: 0.3s;

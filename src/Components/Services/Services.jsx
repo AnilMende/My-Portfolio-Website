@@ -5,31 +5,31 @@ import Services_Data from '../../assets/services_data';
 import arrow_icon from '../../assets/arrow_icon.svg';
 
 const Services = () => {
-    return(
-        <ServicesContainer id="services">
-            <div className="services-title">
-                <h1>My Services</h1>
-                <img src={theme_pattern} alt="" />
-            </div>
+  return (
+    <ServicesContainer id="services">
+      <div className="services-title">
+        <h1>My Services</h1>
+        <img src={theme_pattern} alt="" />
+      </div>
 
-            <div className="services-container">
-                {
-                    Services_Data.map((service, index) => {
-                        return <div className="services-format">
-                            <h3>{service.s_no}</h3>
-                            <h2>{service.s_name}</h2>
-                            <p>{service.s_desc}</p>
+      <div className="services-container">
+        {
+          Services_Data.map((service, index) => {
+            return <div className="services-format">
+              <h3>{service.s_no}</h3>
+              <h2>{service.s_name}</h2>
+              <p>{service.s_desc}</p>
 
-                            <div className="services-readmore">
-                                <p>Read More</p>
-                                <img src={arrow_icon} alt="" />
-                            </div>
-                        </div>
-                    })
-                }
+              <div className="services-readmore">
+                <p>Read More</p>
+                <img src={arrow_icon} alt="" />
+              </div>
             </div>
-        </ServicesContainer>
-    )
+          })
+        }
+      </div>
+    </ServicesContainer>
+  )
 }
 
 export default Services;
@@ -48,7 +48,7 @@ const ServicesContainer = styled.div`
 
       .services-title h1{
         padding: 0px 30px;
-        font-size: 80px;
+        font-size: 60px;
         font-weight: 600;
       }
 
@@ -63,8 +63,8 @@ const ServicesContainer = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
-        padding: 40px;
+        gap: 10px;
+        padding: 30px;
         border-radius: 10px;
         border: 2px solid white;
         cursor: pointer;
@@ -73,17 +73,17 @@ const ServicesContainer = styled.div`
       .services-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 40px;
-        margin-bottom:80px;
+        gap: 30px;
+        margin-bottom:50px;
       }
 
       .services-format h3{
-        font-size: 28px;
+        font-size: 22px;
         font-weight: 600;
       }
 
       .services-format h2{
-        font-size: 38px;
+        font-size: 30px;
         font-weight: 800;
         background: linear-gradient(270deg,#df8908 50%, #b414ff 100%);
         background-clip: text;
@@ -93,8 +93,8 @@ const ServicesContainer = styled.div`
 
       .services-format p{
         color: #d4d4d4;
-        font-size: 22px;
-        line-height: 40px;
+        font-size: 20px;
+        line-height: 30px;
         max-width: 300px;
       }
 

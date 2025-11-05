@@ -87,7 +87,7 @@ const AboutContainer = styled.div`
 
       .about-title h1{
         padding: 0px 30px;
-        font-size: 80px;
+        font-size: 60px;
         font-weight: 600;
       }
 
@@ -103,6 +103,11 @@ const AboutContainer = styled.div`
         gap: 80px;
       }
 
+      .about-left img{
+        width:300px;
+        border-radius: 10px;
+      }
+
       .about-right{
         display: flex;
         flex-direction: column;
@@ -112,20 +117,20 @@ const AboutContainer = styled.div`
       .about-para{
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        font-size: 24px;
+        gap: 15px;
+        font-size: 18px;
         font-weight: 500;
       }
 
       .about-skills{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
       }
 
       .about-skill{
         display: flex;
-        gap: 50px;
+        gap: 20px;
         align-items: center;
         transition: 0.3s;
         cursor: pointer;
@@ -152,7 +157,7 @@ const AboutContainer = styled.div`
         display: flex;
         width: 100%;
         justify-content: space-around;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
       }
       .about-achievement{
         display: flex;

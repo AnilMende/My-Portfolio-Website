@@ -21,17 +21,24 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <img src={logo} alt="" />
+      {/* <img src={logo} alt="" /> */}
+      <h2 className="logo">ANIL</h2>
       <img src={menu_open} onClick={openMenu} className="nav-mob-open" />
 
       <ul ref={menuRef} className="nav-menu">
         <img src={menu_close} onClick={closeMenu} className="nav-mob-close" />
 
-        <li><AnchorLink className="anchor-link" offset={50} href="#home"><p onClick={() => setMenu('home')}>Home</p>{menu === 'home' ? <img src={underline} /> : <></>}</AnchorLink></li>
-        <li><AnchorLink className="anchor-link" offset={50} href="#about"><p onClick={() => setMenu('about')}>About Me</p>{menu === 'about' ? <img src={underline} /> : <></>}</AnchorLink></li>
-        <li><AnchorLink className="anchor-link" offset={50} href="#services"><p onClick={() => setMenu('services')}>Services</p> {menu === 'services' ? <img src={underline} /> : <></>}</AnchorLink></li>
-        <li><AnchorLink className="anchor-link" offset={50} href="#work"><p onClick={() => setMenu('work')}>Portfolio</p> {menu === 'work' ? <img src={underline} /> : <></>}</AnchorLink></li>
-        <li><AnchorLink className="anchor-link" offset={50} href="#contact"><p onClick={() => setMenu('contact')}>Contact</p> {menu === 'contact' ? <img src={underline} /> : <></>}</AnchorLink></li>
+        <a href="#home" onClick={() => setMenu('home')} className={menu === 'home' ? "active": ""} >Home</a>
+        <a href="#about" onClick={() => setMenu('about')} className={menu === 'about'? "active":""}>About Me</a>
+        <a href="#services" onClick={() => setMenu('services')} className={menu === 'services' ? "active":""}>Services</a>
+        <a href="#work" onClick={() => setMenu('work')} className={menu === 'work' ? "active":""}>Portfolio</a>
+        <a href="#contact" onClick={() => setMenu('contact')} className={menu === 'contact'? "active":""}>Contact</a>
+
+        {/* <li><AnchorLink className="anchor-link" offset={50} href="#home"><p onClick={() => setMenu('home')}>Home</p>{menu === 'home' ? <img src={underline} /> : <></>}</AnchorLink></li> */}
+        {/* <li><AnchorLink className="anchor-link" offset={50} href="#about"><p onClick={() => setMenu('about')}>About Me</p>{menu === 'about' ? <img src={underline} /> : <></>}</AnchorLink></li> */}
+        {/* <li><AnchorLink className="anchor-link" offset={50} href="#services"><p onClick={() => setMenu('services')}>Services</p> {menu === 'services' ? <img src={underline} /> : <></>}</AnchorLink></li> */}
+        {/* <li><AnchorLink className="anchor-link" offset={50} href="#work"><p onClick={() => setMenu('work')}>Portfolio</p> {menu === 'work' ? <img src={underline} /> : <></>}</AnchorLink></li> */}
+        {/* <li><AnchorLink className="anchor-link" offset={50} href="#contact"><p onClick={() => setMenu('contact')}>Contact</p> {menu === 'contact' ? <img src={underline} /> : <></>}</AnchorLink></li> */}
       </ul>
 
       <div className="nav-connect">
@@ -49,19 +56,26 @@ const NavbarContainer = styled.div`
       justify-content: space-between;
       margin: 20px 170px;
 
+      .logo{
+        font-family: Outfit;
+        font-size: 26px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
       .nav-menu{
         display: flex;
         align-items: center;
         list-style: none;
-        gap: 60px;
-        font-size: 20px;
+        gap: 40px;
+        font-size: 16px;
       }
 
       .nav-connect{
-        padding: 20px 50px;
+        padding: 15px 20px;
         border-radius: 50px;
         background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
-        font-size: 22px;
+        font-size: 16px;
         cursor: pointer;
         transition: 0.5s;
       }
@@ -70,11 +84,18 @@ const NavbarContainer = styled.div`
 
       }
 
-      .nav-menu li{
+      .nav-menu a{
         display: flex;
         flex-direction: column;
         gap: 5px;
+        text-decoration: none;
+        color: #fff;
         cursor: pointer;
+      }
+
+      .active{
+        padding-bottom: 2px;
+        border-bottom: 2px solid white;
       }
 
       .nav-menu li img{

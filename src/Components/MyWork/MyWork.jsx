@@ -45,7 +45,7 @@ const MyWorkContainer = styled.div`
 
       .mywork-title h1{
         padding: 0px 30px;
-        font-size: 80px;
+        font-size: 60px;
         font-weight: 600;
       }
       .mywork-title img{
@@ -76,12 +76,12 @@ const MyWorkContainer = styled.div`
 
       .mywork-showmore{
         display: flex;
-        gap: 15px;
-        margin-bottom: 80px;
+        gap: 10px;
+        margin-bottom: 20px;
         border-radius: 50px;
         border: 2px solid white;
-        padding: 20px 50px;
-        font-size: 22px;
+        padding: 20px 40px;
+        font-size: 20px;
         font-weight: 500;
         transition: 0.6s;
         cursor: pointer;

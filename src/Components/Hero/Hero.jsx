@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="hero-connect">
           <AnchorLink className="anchor-link" offset={50} href="#contact">Connect with Me</AnchorLink>
         </div>
-        <div className="hero-resume">Myresume</div>
+        <div className="hero-resume">My resume</div>
       </div>
     </HeroContainer>
   )
@@ -28,14 +28,17 @@ const HeroContainer = styled.div`
       gap: 35px;
       
       .profile-img{
-        margin-top: 70px;
+        margin-top: 20px;
+        width: 240px;
+        border-radius: 50%;
       }
 
       h1{
         text-align: center;
-        width: 70%;
-        font-size: 75px;
+        width: 65%;
+        font-size: 65px;
         font-weight: 600;
+        line-height: 70px;
       }
 
       h1 span{
@@ -48,8 +51,8 @@ const HeroContainer = styled.div`
       .description{
         width: 50%;
         text-align: center;
-        font-size: 24px;
-        line-height: 40px;
+        font-size: 18px;
+        line-height: 30px;
       }
 
       .hero-action{
@@ -62,14 +65,14 @@ const HeroContainer = styled.div`
       }
 
       .hero-connect{
-        padding: 20px 40px;
+        padding: 20px 30px;
         background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
         border-radius: 50px;
         cursor: pointer;
       }
 
       .hero-resume{
-        padding: 20px 65px;
+        padding: 20px 55px;
         border-radius: 50px;
         cursor: pointer;
         border: 2px solid #fff;
