@@ -103,4 +103,21 @@ const FooterContainer = styled.div`
         transform: scale(1.1);
         transition: 0.3s;
       }
+
+      /* making responsive */
+
+      @media (max-width:768px){
+        margin: 50px 70px;
+
+        .footer-top{
+          flex-direction: column;
+          gap: 50px;
+        }
+
+        .footer-bottom{
+          display: flex;
+          flex-direction: column-reverse;
+          margin-bottom: 50px;
+        }
+      }
 `;

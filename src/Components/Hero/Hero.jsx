@@ -87,4 +87,41 @@ const HeroContainer = styled.div`
         text-decoration: none;
         color: white;
       }
+
+      /* making responsive */
+      @media (max-width:768px){
+        .profile-img{
+          margin-bottom: 120x;
+          width: 260px;
+        }
+
+        h1{
+          margin-top: 50px;
+          width: 90%;
+          font-size: 50px;
+        }
+
+        .description{
+          width: 60%;
+          font-size: 18px;
+          line-height: 32px;
+          margin: 10px 0px;
+        }
+
+        .hero-action{
+          gap: 16px;
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 50px;
+        }
+
+        .hero-connect{
+          padding: 20px 30px;
+          border-radius: 40px;
+        }
+        .hero-resume{
+          padding: 20px 30px;
+          border-radius: 40px;
+        }
+      }
 `;

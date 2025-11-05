@@ -90,4 +90,39 @@ const MyWorkContainer = styled.div`
         gap: 30px;
         transition: 0.6s;
       }
+
+      /* making responsive */
+
+      @media (max-width:768px){
+        gap: 50px;
+        margin: 50px 70px;
+        align-items: start;
+
+        .mywork-title h1{
+          padding: 0;
+          font-size: 50px;
+          font-weight: 600;
+        }
+
+        .mywork-title img{
+          width: 130px;
+          margin-right: -30px;
+        }
+
+        .mywork-container{
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+        .mywork-container img{
+          width: 100%;
+          height: 100%;
+        }
+
+        .mywork-showmore{
+          padding: 20px 40px;
+          font-size: 18px;
+          margin: 50px auto;
+          cursor: pointer;
+        }
+      }
 `;
